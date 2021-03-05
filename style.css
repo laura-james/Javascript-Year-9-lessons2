@@ -2,10 +2,26 @@
 
 body {
   font-family: Helvetica;
-  margin: 2em;
+  text-align: center;
+  background-color: cyan;
 }
-
-h1 {
-  font-style: italic;
-  color: #373fff;
+h1{
+  color:white;
+  text-shadow:2px 2px #333;
+}
+div{
+  background-color:green;
+  border: 5px solid black;
+  border-radius: 20px;
+  width:70%;
+  margin:auto;
+}
+input,button{
+  width:250px;
+  padding:5px;
+  margin:5px;
+}
+label{
+  background-color:lightgray;
+  padding:4px;
 }

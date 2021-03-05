@@ -14,15 +14,27 @@
     <script src="/script.js" defer></script>
   </head>  
   <body>
-    <h1>Hi there!</h1>
-    
-    <p>
-      Noodles
-    </p>
-
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js" defer></script>
+    <div id="loginPanel">
+  <h1>Login</h1>
+  <p>Enter your credentials</p>
+  <label>Username</label>
+  <input type="text" id=username />
+  <br>
+  <label>Password</label>
+  <input type="password" id=password />
+  <br>
+  <input type="submit" value="Press to login" onclick="login()">
+  <br>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" id="myImg" width="150">
+  </div>
+  
+  <div id="testerPanel">
+    <h1>Test the love!</h1>
+    <label>Enter 1st Name:</label> <input type="text" id="name1" /><br>
+    <label>Enter 2nd Name:</label> <input type="text" id="name2" /><br>  
+    <button onclick="testLove()">Test The Love</button>
+    <br>
+    <span id="msg"></span>
+  </div>
   </body>
 </html>
