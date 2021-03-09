@@ -10,7 +10,7 @@ function login(){
   if (uname == "Joe" && pword == "M4ma!"){
     
     alert("Welcome, you are now logged in!")
-    document.ElementById("myImg").src="https://bcs-computing.co.uk/cat.jpg";
+    document.getElementById("myImg").src="https://bcs-computing.co.uk/cat.jpg";
     
     document.getElementById("testerPanel").style.display="block";
     document.getElementById("testerPanel").style.display="block";
