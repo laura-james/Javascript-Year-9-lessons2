@@ -22,3 +22,11 @@ function login(){
     document.getElementById("loginPanel").style.display="block";
   }
 }
+function testLove(){
+  var name1 = document.getElementById("name2").value;
+  var name2 = document.getElementById("name1").value;
+  
+  var rand = Math.floor(Math.random() * 100);
+  
+  document.getElementById("msg").innerHTML =name1 + " loves " + name2 +": " +rand +"%";
+}
