@@ -29,4 +29,13 @@ function testLove(){
   var rand = Math.floor(Math.random() * 100);
   
   document.getElementById("msg").innerHTML =name1 + " loves " + name2 +": " +rand +"%";
+  if(rand<50){
+    document.getElementById("result").innerHTML = "Looks like it won't work out for you guys.";
+  }else if(rand<60){
+    document.getElementById("result").innerHTML = "It's unlikely to happen.";
+  }else if(rand<80){
+    document.getElementById("result").innerHTML = "There's DEFINITELY a chance.";
+  }else{
+    document.getElementById("result").innerHTML = "I reckon you're in luck!";
+  }
 }

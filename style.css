@@ -26,6 +26,8 @@ label{
   padding:4px;
 }
 #msg{
-  text-color: pink;
+  font-size: 25px;
+}
+#result{
   font-size: 25px;
 }
