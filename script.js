@@ -21,7 +21,7 @@ function login(){
   
   if (uname == "Joe" && pword == "M4ma!"){
     
-    document.getElementById("login").innerHTML="Logging you in...";
+    document.getElementById("login").innerHTML="Correct";
     sleep(1000);
     
     document.getElementById("testerPanel").style.display="block";
