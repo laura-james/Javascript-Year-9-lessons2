@@ -30,12 +30,12 @@ function testLove(){
   
   document.getElementById("msg").innerHTML =name1 + " loves " + name2 +": " +rand +"%";
   if(rand<50){
-    document.getElementById("result").innerHTML = "Looks like it won't work out for you guys.";
+    document.getElementById("result").innerHTML = "<span style='color: red;'>Looks like it won't work out for you guys.</span>";
   }else if(rand<60){
-    document.getElementById("result").innerHTML = "It's unlikely to happen.";
+    document.getElementById("result").innerHTML = "<span style='color: #d627b0;'>It's unlikely to happen.</span>";
   }else if(rand<80){
-    document.getElementById("result").innerHTML = "There's DEFINITELY a chance.";
+    document.getElementById("result").innerHTML = "<span style='color: purple;'>There's DEFINITELY a chance.</span>";
   }else{
-    document.getElementById("result").innerHTML = "I reckon you're in luck!";
+    document.getElementById("result").innerHTML = "<span style='color: blue;'>I reckon you're in luck!</span>";
   }
 }
