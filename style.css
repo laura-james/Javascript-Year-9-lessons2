@@ -31,3 +31,6 @@ label{
 #result{
   font-size: 25px;
 }
+#testerPanel{
+  display: none;
+}

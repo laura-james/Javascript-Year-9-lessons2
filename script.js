@@ -3,14 +3,26 @@
 
 // prints "hi" in the browser's dev tools console
 console.log("hi");
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+
+console.log("Hello");
+sleep(2000);
+console.log("World!");
+
 function login(){
   var uname = document.getElementById("username").value;
   var pword = document.getElementById("password").value;
   
   if (uname == "Joe" && pword == "M4ma!"){
     
-    alert("Welcome, you are now logged in!")
-    document.getElementById("myImg").src="https://bcs-computing.co.uk/cat.jpg";
+    document.getElementById("login").innerHTML = "Logging you in..."
+    sleep(2000)
     
     document.getElementById("testerPanel").style.display="block";
     document.getElementById("testerPanel").style.display="block";
