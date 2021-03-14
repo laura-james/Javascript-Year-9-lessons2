@@ -11,18 +11,11 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 
-console.log("Hello");
-sleep(2000);
-console.log("World!");
-
 function login(){
   var uname = document.getElementById("username").value;
   var pword = document.getElementById("password").value;
   
   if (uname == "Joe" && pword == "M4ma!"){
-    
-    document.getElementById("login").innerHTML="Correct";
-    sleep(1000);
     
     document.getElementById("testerPanel").style.display="block";
     document.getElementById("testerPanel").style.display="block";
