@@ -39,7 +39,9 @@ function testLove(){
     document.getElementById("result").innerHTML = "<span style='color: #d627b0;'>It's unlikely to happen.</span>";
   }else if(rand<80){
     document.getElementById("result").innerHTML = "<span style='color: purple;'>There's DEFINITELY a chance.</span>";
-  }else{
+  }else if(rand<100){
     document.getElementById("result").innerHTML = "<span style='color: blue;'>I reckon you're in luck!</span>";
+  }else{
+    document.getElementById("result").innerHTML = "<span style='color: gold;'>It's a perfect match!</span>
   }
 }
