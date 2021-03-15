@@ -2,7 +2,6 @@
     to your site with Javascript */
 
 // prints "hi" in the browser's dev tools console
-console.log("hi");
 function sleep(milliseconds) {
   const date = Date.now();
   let currentDate = null;
