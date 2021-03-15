@@ -16,6 +16,9 @@ function login(){
   
   if (uname == "Joe" && pword == "M4ma!"){
     
+    document.getElementById("login").innerHTML = "Logging you in...";
+    sleep(1000)
+    
     document.getElementById("testerPanel").style.display="block";
     document.getElementById("testerPanel").style.display="block";
     document.getElementById("loginPanel").style.display="none";
@@ -42,6 +45,6 @@ function testLove(){
   }else if(rand<100){
     document.getElementById("result").innerHTML = "<span style='color: blue;'>I reckon you're in luck!</span>";
   }else{
-    document.getElementById("result").innerHTML = "<span style='color: gold;'>It's a perfect match!</span>
+    document.getElementById("result").innerHTML = "<span style='color: gold;'>It's a perfect match!</span>";
   }
 }

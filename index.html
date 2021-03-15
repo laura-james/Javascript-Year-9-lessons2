@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Hello!</title>
-    
+
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
+    <link rel="stylesheet" href="/style.css" />
+
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
-  </head>  
+  </head>
   <body>
     <div id="loginPanel">
-  <h1>Login</h1>
-  <p>Enter your credentials</p>
-  <label>Username</label>
-  <input type="text" id=username />
-  <br>
-  <label>Password</label>
-  <input type="password" id=password />
-  <br>
-  <input type="submit" value="Press to login" onclick="login()">
-  <br>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" id="myImg" width="150">
-  </div>
-  
-  <div id="testerPanel">
-    <h1>Test the love!</h1>
-    <label>Enter your Name:</label> <input type="text" id="name1" /><br>
-    <label>Enter their Name:</label> <input type="text" id="name2" /><br>  
-    <button onclick="testLove()">Test The Love</button>
-    <br>
-    <span id="msg"></span>
-    <br>
-    <span id="result"></span>
-  </div>
+      <h1>Login</h1>
+      <p>Enter your credentials</p>
+      <label>Username</label>
+      <input type="text" id="username" />
+      <br />
+      <label>Password</label>
+      <input type="password" id="password" />
+      <br />
+      <input type="submit" value="Press to login" onclick="login()" />
+      <br />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png"
+        id="myImg"
+        width="150"
+      />
+      <br />
+      <span id ="login">Log in correctly to use the love tester!</span>
+    </div>
+
+    <div id="testerPanel">
+      <h1>Test the love!</h1>
+      <label>Enter your Name:</label> <input type="text" id="name1" /><br />
+      <label>Enter their Name:</label> <input type="text" id="name2" /><br />
+      <button onclick="testLove()">Test The Love</button>
+      <br />
+      <span id="msg"></span>
+      <br />
+      <span id="result"></span>
+    </div>
   </body>
 </html>
