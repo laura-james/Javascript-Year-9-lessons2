@@ -50,7 +50,11 @@ function testLove(){
 }
 
 function generate(){
-  var output = document.getElementById("msg").innerHTML 
-  output = output + "the button works!";
-  document.getElementById("msg").innerHTML = output;
+  var multiplier = document.getElementById("")  
+  document.getElementById("msg").innerHTML = "";
+  for (var i=0;i<11;i++){
+    var output = document.getElementById("msg").innerHTML
+    output = output + i + "x 8 = " + i * 8 + "<br>";
+    document.getElementById("msg").innerHTML = output;
+  }
 }
