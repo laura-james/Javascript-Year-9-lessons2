@@ -48,3 +48,9 @@ function testLove(){
     document.getElementById("result").innerHTML = "<span style='color: gold;'>It's a perfect match!</span>";
   }
 }
+
+function generate(){
+  var output = document.getElementById("msg").innerHTML 
+  output = output + "the button works!";
+  document.getElementById("msg").innerHTML = output;
+}
