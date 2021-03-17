@@ -54,7 +54,7 @@ function generate(){
   document.getElementById("msg").innerHTML = "";
   for (var i=0;i<11;i++){
     var output = document.getElementById("msg").innerHTML
-    output = output + i + "x" text = " + i * 8 + "<br>";
+   // output = output + i + "x" + text + " = " + i * 8 + "<br>";
     document.getElementById("msg").innerHTML = output;
   }
 }
