@@ -83,10 +83,18 @@ function playgame(){
     userchoice = 2;
   }
   
-  alert("Computer chose " + choices[compchoice])
+  //alert("Computer chose " + choices[compchoice])
   
 // write the algorithm for working out who wins below this line VVVVV
   
 
+  if(compchoice==userchoice){
+    document.getElementById("result").innerHTML="DRAW";    
+  }else if((compchoice==0 && userchoice==1) || (compchoice==1 && userchoice==2) || (compchoice==2 && userchoice==0) ){
+    document.getElementById("result").innerHTML="USER WINS";
+  } else {
+    document.getElementById("result").innerHTML="COMPUTER WINS";
+  }
+    
   
 }//end of function
