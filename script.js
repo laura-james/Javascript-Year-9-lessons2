@@ -58,3 +58,35 @@ function generate(){
     document.getElementById("msg").innerHTML = output;
   }
 }
+var myscore=0;
+var compscore=0;
+function playgame(){
+  //get the computer's random choice
+  var compchoice = Math.random()*3;
+  compchoice= Math.floor(compchoice);
+ 
+  var choices=["rock","paper","scissors"];
+ 
+  
+  document.getElementById("msg").innerHTML=choices[compchoice];
+  
+  //get value user typed
+  var userchoice = document.getElementById("choice").value;
+  
+
+  //set it to either 0,1,2 to make it easier to compare with compchoice
+  if(userchoice=="rock"){
+    userchoice = 0;
+  } else if(userchoice=="paper"){
+    userchoice = 1;
+  } else {
+    userchoice = 2;
+  }
+  
+  alert("Computer chose " + choices[compchoice])
+  
+// write the algorithm for working out who wins below this line VVVVV
+  
+
+  
+}//end of function
