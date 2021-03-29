@@ -98,3 +98,10 @@ function playgame(){
     
   
 }//end of function
+
+function encrypt(){
+  var word = document.getElementById("plaintext").value;
+  for(var i=0;i<word.length;i++){
+    alert(word.charCodeAt(i))
+  }
+}
