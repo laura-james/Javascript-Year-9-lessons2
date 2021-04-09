@@ -65,6 +65,14 @@ function generate() {
   }
 }
 
+function encrypt() {
+  var word = document.getElementById("plaintext").value;
+  for (var i = 0; i < word.length; i++) {
+    alert(word.charCodeAt(i));
+  }
+}
+
+
 //ROCK PAPER SCISSORS
 var myscore = 0;
 var compscore = 0;
@@ -98,12 +106,3 @@ function playgame() {
   }
 } //end of function
 
-
-
-
-function encrypt() {
-  var word = document.getElementById("plaintext").value;
-  for (var i = 0; i < word.length; i++) {
-    alert(word.charCodeAt(i));
-  }
-}
