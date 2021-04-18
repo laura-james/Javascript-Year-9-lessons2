@@ -75,19 +75,19 @@ var i=0
 function randCircle(){
   var ctx = document.getElementById("mycanvas").getContext("2d");
   var red=Math.floor(Math.random()*255)
-  var green=Math.floor(Math.random()*255)
-var blue=Math.floor(Math.random()*255)
-  ctx.fillStyle = "rgba("+red+","+green+","+blue+",0.3)";
+  var green=Math.floor(Math.random()*50)
+var blue=Math.floor(Math.random()*100)
+  ctx.fillStyle = "rgba("+red+","+green+","+blue+",0.5)";
   ctx.strokeStyle = "orange";
   ctx.beginPath();
   var r1 = Math.floor(Math.random()*200)
   var r2 = Math.floor(Math.random()*200)
-  var radius= Math.floor(Math.random()*200)
-  ctx.arc(r1, r2, 12, 0, 2 * Math.PI);
+  var radius= Math.floor(Math.random()*20)
+  ctx.arc(r1, r2, radius, 0, 2 * Math.PI);
   ctx.fill();
-  ctx.stroke();
+  //ctx.stroke();
 }
-setInterval(randCircle,10);
+setInterval(randCircle,100);
 
 
 
