@@ -1,13 +1,13 @@
-function draw() {
+function drawemoji() {
   var ctx = document.getElementById("mycanvas").getContext("2d");
   //styles
   ctx.lineWidth = 10;
   ctx.fillStyle = "yellow";
   ctx.strokeStyle = "green";
   //a greenline
-  ctx.moveTo(0, 0);
-  ctx.lineTo(200, 100);
-  ctx.stroke();
+  //ctx.moveTo(0, 0);
+  //ctx.lineTo(200, 100);
+  //ctx.stroke();
   //a yellow circle with a green outline
   ctx.beginPath();
   ctx.fillStyle = "yellow";
@@ -29,5 +29,12 @@ function draw() {
   ctx.arc(145, 75, 20, 0, 1 * Math.PI);
   ctx.stroke();
   ctx.fill();
+}
+
+function draw(){
+  var ctx = document.getElementById("mycanvas").getContext("2d");
+   //a red rectangle  
+  ctx.fillStyle = "red";
+  ctx.fillRect(10, 10, 150, 100);
 }
 draw();
