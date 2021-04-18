@@ -31,10 +31,50 @@ function drawemoji() {
   ctx.fill();
 }
 
+
+
+
+
+
+
 function draw(){
   var ctx = document.getElementById("mycanvas").getContext("2d");
    //a red rectangle  
   ctx.fillStyle = "red";
   ctx.fillRect(10, 10, 150, 100);
+  ctx.lineWidth = 5;
+  
+  ctx.strokeStyle = "green";
+  ctx.moveTo(10, 10);
+  ctx.lineTo(160, 110);
+  ctx.moveTo(160, 10);
+  ctx.lineTo(10, 110);
+  ctx.stroke();
 }
 draw();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
