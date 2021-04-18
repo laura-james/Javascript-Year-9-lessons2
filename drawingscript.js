@@ -50,6 +50,13 @@ function draw(){
   ctx.moveTo(160, 10);
   ctx.lineTo(10, 110);
   ctx.stroke();
+  
+  ctx.beginPath();
+  ctx.fillStyle = "yellow";
+  ctx.strokeStyle = "orange";
+  ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+  ctx.fill();
+  ctx.stroke();
 }
 draw();
 
