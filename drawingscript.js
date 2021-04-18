@@ -46,34 +46,48 @@ ctx.lineWidth = 5;
   ctx.stroke();
 }
 
-
-
-
-
-
-
 function drawbasic(){
+  i = i+1;
+  if(i>250){
+    i=0;
+  }
   var ctx = document.getElementById("mycanvas").getContext("2d");
    //a red rectangle  
   ctx.fillStyle = "red";
   ctx.fillRect(10, 10, 150, 100);
   ctx.lineWidth = 5;
   
-  ctx.strokeStyle = "green";
+  //ctx.strokeStyle = "green";
   ctx.moveTo(10, 10);
   ctx.lineTo(160, 110);
   ctx.moveTo(160, 10);
   ctx.lineTo(10, 110);
   ctx.stroke();
-  
+  //ctx.closePath();
   ctx.beginPath();
   ctx.fillStyle = "yellow";
   ctx.strokeStyle = "orange";
-  ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+  ctx.arc(i, 100, 50, 0, 2 * Math.PI);
   ctx.fill();
   ctx.stroke();
 }
-draw();
+var i=0
+function randCircle(){
+  var ctx = document.getElementById("mycanvas").getContext("2d");
+  var red=Math.floor(Math.random()*255)
+  var green=Math.floor(Math.random()*255)
+var blue=Math.floor(Math.random()*255)
+  ctx.fillStyle = "rgba("+red+","+green+","+blue+",0.3)";
+  ctx.strokeStyle = "orange";
+  ctx.beginPath();
+  var r1 = Math.floor(Math.random()*200)
+  var r2 = Math.floor(Math.random()*200)
+  var radius= Math.floor(Math.random()*200)
+  ctx.arc(r1, r2, 12, 0, 2 * Math.PI);
+  ctx.fill();
+  ctx.stroke();
+}
+setInterval(randCircle,10);
 
 
 
