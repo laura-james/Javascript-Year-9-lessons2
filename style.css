@@ -41,3 +41,7 @@ label{
 #testerPanel{
   display: none;
 }
+canvas{
+  border:1px solid blue;
+  background-color:white;
+}
