@@ -17,12 +17,16 @@ function draw() {
   ctx.stroke();
    //a red rectangle  
   ctx.fillStyle = "red";
-  ctx.fillRect(100, 100, 150, 80);
+  ctx.fillRect(70, 130, 60, 10);
   
   //a red semi circle
   ctx.beginPath();
   //ctx.fillStyle = "yellow";
-  ctx.arc(50, 75, 50, 0, 1 * Math.PI);
+  ctx.arc(65, 75, 20, 0, 1 * Math.PI);
+  ctx.stroke();
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(145, 75, 20, 0, 1 * Math.PI);
   ctx.stroke();
   ctx.fill();
 }
