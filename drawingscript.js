@@ -22,7 +22,7 @@ function draw() {
   
   //a red semi circle
   ctx.beginPath();
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "rgba(255,45,56,0.9)";
   ctx.arc(60, 75, 20, 0, 2 * Math.PI);
   ctx.stroke();
   ctx.fill();
