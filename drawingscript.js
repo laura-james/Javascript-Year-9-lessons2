@@ -102,10 +102,13 @@ function drawGrid(){
   //a red rectangle
   
   //ctx.fillRect(10, 10, 10, 10);
-  for(var i = 0; i <10; i++){
-    for(var j = 0; j <10; j++){
-    ctx.fillStyle = "rgba(255,"+50*j+","+50*i+")";
-    ctx.fillRect(1+i*40, 1+j*40, 20, 20);
+  for(var i = 0; i <11; i++){
+    for(var j = 0; j <11; j++){
+        ctx.beginPath();
+    ctx.fillStyle = "rgba(0,"+25*j+","+25*i+")";
+   ctx.fillRect(1+i*40, 1+j*40, 20, 20);
+      ctx.ellipse(1+i*40, +j*40, 20, 20, 1.2, 0, 2 * Math.PI);
+  ctx.fill();
     }
   }
   
