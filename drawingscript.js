@@ -98,22 +98,17 @@ function randCircle() {
 setInterval(draw, 50);
 
 function drawGrid(){
-   var ctx = document.getElementById("gridcanvas").getContext("2d");
-  //a red rectangle
-  
-  //ctx.fillRect(10, 10, 10, 10);
-  for(var i = 0; i <11; i++){
-    for(var j = 0; j <11; j++){
-        ctx.beginPath();
-    ctx.fillStyle = "rgba(0,"+25*j+","+25*i+")";
-   ctx.fillRect(1+i*40, 1+j*40, 20, 20);
-      ctx.ellipse(1+i*40, +j*40, 20, 20, 1.2, 0, 2 * Math.PI);
-  ctx.fill();
-    }
-  }
-  
+
+  var ctx = document.getElementById("mycanvas2").getContext("2d");
+
+  for (var i = 0; i < 11; i++) {
+    for (var j = 0; j < 11; j++) {
+      ctx.fillStyle = "magenta";
+      ctx.fillRect(i * 40,  j * 40, 20, 20);    
+    }//end j for loop
+  }//end i for loop
 }
-//drawGrid()
+//drawGrid();
 var height=400;
 function drawLinesOLD() {
   
@@ -142,13 +137,27 @@ function drawLinesOLD() {
     ctx.stroke();
   }
 }
+
+
+
 function drawLines(){
   var ctx = document.getElementById("mycanvas2").getContext("2d");
   ctx.strokeStyle = "green";
-  for(var i = 0; i < 4; i++){
+  for(var i = 0; i < 40; i++){
     ctx.moveTo(i*10, 0);
+    ctx.lineTo(200, 200);
+    ctx.stroke();
+  }
+   for(var i = 0; i < 40; i++){
+    ctx.moveTo(i*10, 400);
     ctx.lineTo(200, 200);
     ctx.stroke();
   }
 }
 drawLines()
+
+
+
+
+
+
