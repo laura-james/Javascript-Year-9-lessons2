@@ -114,3 +114,13 @@ function drawGrid(){
   
 }
 drawGrid()
+function drawLines(){
+     var ctx = document.getElementById("mycanvas2").getContext("2d");
+    for(var i = 0; i <11; i++){
+      ctx.moveTo(10, 10);
+  ctx.lineTo(160, 110);
+
+  ctx.stroke();
+    }
+}
+drawLines()
