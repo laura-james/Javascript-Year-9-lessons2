@@ -142,4 +142,4 @@ function drawLines() {
     ctx.stroke();
   }
 }
-setInterval(drawLines,20)
+setInterval(drawLines,100)
