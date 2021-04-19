@@ -144,33 +144,35 @@ function drawLinesOLD() {
 
 function drawLines(){
   var ctx = document.getElementById("mycanvas2").getContext("2d");
-  ctx.strokeStyle = "cyan";
-  ctx.lineWidth = 3;
+  ctx.strokeStyle = "#6CB8A0";
+  ctx.lineWidth = 2;
   for(var i = 0; i < 40; i++){
     ctx.moveTo(i*10, 0);
-    ctx.lineTo(200, 200);
+    ctx.lineTo(100, 100);
     ctx.stroke();
   }
    for(var i = 0; i < 40; i++){
     ctx.moveTo(i*10, 400);
-    ctx.lineTo(200, 200);
+    ctx.lineTo(100, 200);
     ctx.stroke();
   }
   for(var i = 0; i < 40; i++){
     ctx.moveTo(0, i*10);
-    ctx.lineTo(200, 200);
+    ctx.lineTo(100, 200);
     ctx.stroke();
   }
   for(var i = 0; i < 41; i++){
     ctx.moveTo( 400,i*10);
-    ctx.lineTo(200, 200);
+    ctx.lineTo(100, 200);
     ctx.stroke();
   }
-  for (var i = 0; i < 50; i++) {
-    for (var j = 0; j < 50; j++) {
-      //ctx.fillStyle = "magenta";
-      ctx.fillStyle = "rgba("+j*20+","+i*2+","+j*30+",1)";
-      ctx.fillRect(i * 10,  j * 20, 10, 10);    
+  for (var i = 0; i < 11; i++) {
+    for (var j = 0; j < 11; j++) {
+      ctx.beginPath();
+      ctx.fillStyle = "#EE1AAB";
+      //ctx.fillStyle = "rgba("+i*j*2+","+i*15+","+j*15+",0.8)";
+      ctx.arc(i * 40,  j * 40, 5+i, 0,2*Math.PI);    
+      ctx.fill()
     }//end j for loop
   }//end i for loop
 }
