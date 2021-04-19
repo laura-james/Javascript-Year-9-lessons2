@@ -144,7 +144,8 @@ function drawLinesOLD() {
 
 function drawLines(){
   var ctx = document.getElementById("mycanvas2").getContext("2d");
-  ctx.strokeStyle = "green";
+  ctx.strokeStyle = "cyan";
+  ctx.lineWidth = 3;
   for(var i = 0; i < 40; i++){
     ctx.moveTo(i*10, 0);
     ctx.lineTo(200, 200);
@@ -155,11 +156,21 @@ function drawLines(){
     ctx.lineTo(200, 200);
     ctx.stroke();
   }
-  for (var i = 0; i < 10; i++) {
-    for (var j = 0; j < 10; j++) {
+  for(var i = 0; i < 40; i++){
+    ctx.moveTo(0, i*10);
+    ctx.lineTo(200, 200);
+    ctx.stroke();
+  }
+  for(var i = 0; i < 41; i++){
+    ctx.moveTo( 400,i*10);
+    ctx.lineTo(200, 200);
+    ctx.stroke();
+  }
+  for (var i = 0; i < 50; i++) {
+    for (var j = 0; j < 50; j++) {
       //ctx.fillStyle = "magenta";
-      ctx.fillStyle = "rgba(255,"+i*25+","+j*25+",0.7)";
-      ctx.fillRect(i * 40,  j * 40, 20, 20);    
+      ctx.fillStyle = "rgba("+j*20+","+i*2+","+j*30+",1)";
+      ctx.fillRect(i * 10,  j * 20, 10, 10);    
     }//end j for loop
   }//end i for loop
 }
