@@ -113,9 +113,9 @@ function drawGrid(){
   }
   
 }
-drawGrid()
+//drawGrid()
 var height=400;
-function drawLines() {
+function drawLinesOLD() {
   
   height=height-2
   if (height<-400){
@@ -142,4 +142,14 @@ function drawLines() {
     ctx.stroke();
   }
 }
-setInterval(drawLines,100)
+function drawLines(){
+  var ctx = document.getElementById("mycanvas2").getContext("2d");
+  ctx.strokeStyle = "green";
+  ctx.moveTo(0, 0);
+  ctx.lineTo(200, 200);
+  ctx.stroke();
+  ctx.moveTo(10, 0);
+  ctx.lineTo(200, 200);
+  ctx.stroke();
+}
+drawLines()
