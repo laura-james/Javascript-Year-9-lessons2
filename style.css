@@ -44,4 +44,6 @@ label{
 canvas{
   border:1px solid blue;
   background-color:white;
+  width:400px;
+  height:400px;
 }
