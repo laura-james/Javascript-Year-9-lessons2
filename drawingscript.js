@@ -96,3 +96,18 @@ function randCircle() {
   //ctx.stroke();
 }
 setInterval(draw, 50);
+
+function drawGrid(){
+   var ctx = document.getElementById("gridcanvas").getContext("2d");
+  //a red rectangle
+  
+  //ctx.fillRect(10, 10, 10, 10);
+  for(var i = 0; i <10; i++){
+    for(var j = 0; j <10; j++){
+    ctx.fillStyle = "rgba(255,"+50*j+","+50*i+")";
+    ctx.fillRect(1+i*40, 1+j*40, 20, 20);
+    }
+  }
+  
+}
+drawGrid()
