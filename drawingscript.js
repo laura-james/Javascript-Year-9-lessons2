@@ -153,6 +153,12 @@ function drawLines(){
     ctx.lineTo(200, 200);
     ctx.stroke();
   }
+  for (var i = 0; i < 10; i++) {
+    for (var j = 0; j < 10; j++) {
+      ctx.fillStyle = "magenta";
+      ctx.fillRect(i * 40,  j * 40, 20, 20);    
+    }//end j for loop
+  }//end i for loop
 }
 drawLines()
 
