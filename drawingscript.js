@@ -118,10 +118,13 @@ var height=400;
 function drawLines() {
   
   height=height-2
+  if (height<-400){
+    height=400
+  }
   var ctx = document.getElementById("mycanvas2").getContext("2d");
   ctx.fillStyle = "yellow";
   ctx.fillRect(0, 0, 400, 400);
-   ctx.beginPath();
+  // ctx.beginPath();
   for (var i = 0; i < 41; i++) {
       ctx.beginPath();
     ctx.moveTo(i * 10, 400-height);
@@ -132,7 +135,7 @@ function drawLines() {
    
   for (var i = 0; i < 41; i++) {
     
-      ctx.beginPath();
+   //   ctx.beginPath();
     ctx.moveTo(i * 10, height);
     ctx.lineTo(200, 200);
 
