@@ -114,13 +114,29 @@ function drawGrid(){
   
 }
 drawGrid()
-function drawLines(){
-     var ctx = document.getElementById("mycanvas2").getContext("2d");
-    for(var i = 0; i <11; i++){
-      ctx.moveTo(10, 10);
-  ctx.lineTo(160, 110);
+var height=400;
+function drawLines() {
+  
+  height=height-2
+  var ctx = document.getElementById("mycanvas2").getContext("2d");
+  ctx.fillStyle = "yellow";
+  ctx.fillRect(0, 0, 400, 400);
+   ctx.beginPath();
+  for (var i = 0; i < 41; i++) {
+      ctx.beginPath();
+    ctx.moveTo(i * 10, 400-height);
+    ctx.lineTo(200, 200);
 
-  ctx.stroke();
-    }
+    ctx.stroke();
+  }
+   
+  for (var i = 0; i < 41; i++) {
+    
+      ctx.beginPath();
+    ctx.moveTo(i * 10, height);
+    ctx.lineTo(200, 200);
+
+    ctx.stroke();
+  }
 }
-drawLines()
+setInterval(drawLines,20)
