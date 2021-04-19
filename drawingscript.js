@@ -39,7 +39,7 @@ function draw() {
   
    ctx.beginPath();
   ctx.fillStyle = "blue";
-  ctx.ellipse(100, 100, 50, 75, 0, 0, 2* Math.PI);
+ // ctx.ellipse(100, 100, 50, 75, 0, 0, 2* Math.PI);
   ctx.stroke();
   ctx.fill();
   
@@ -95,7 +95,7 @@ var blue=Math.floor(Math.random()*100)
   ctx.fill();
   //ctx.stroke();
 }
-setInterval(randCircle,50);
+setInterval(draw,50);
 
 
 
