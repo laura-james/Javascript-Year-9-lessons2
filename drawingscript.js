@@ -145,11 +145,10 @@ function drawLinesOLD() {
 function drawLines(){
   var ctx = document.getElementById("mycanvas2").getContext("2d");
   ctx.strokeStyle = "green";
-  ctx.moveTo(0, 0);
-  ctx.lineTo(200, 200);
-  ctx.stroke();
-  ctx.moveTo(10, 0);
-  ctx.lineTo(200, 200);
-  ctx.stroke();
+  for(var i = 0; i < 4; i++){
+    ctx.moveTo(i*10, 0);
+    ctx.lineTo(200, 200);
+    ctx.stroke();
+  }
 }
 drawLines()
