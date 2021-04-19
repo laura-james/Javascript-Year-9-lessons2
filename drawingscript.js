@@ -103,7 +103,9 @@ function drawGrid(){
 
   for (var i = 0; i < 11; i++) {
     for (var j = 0; j < 11; j++) {
-      ctx.fillStyle = "magenta";
+      //ctx.fillStyle = "magenta";
+      ctx.fillStyle = "rgb(255,"+i*25+","+j*25+")";
+
       ctx.fillRect(i * 40,  j * 40, 20, 20);    
     }//end j for loop
   }//end i for loop
@@ -155,7 +157,8 @@ function drawLines(){
   }
   for (var i = 0; i < 10; i++) {
     for (var j = 0; j < 10; j++) {
-      ctx.fillStyle = "magenta";
+      //ctx.fillStyle = "magenta";
+      ctx.fillStyle = "rgba(255,"+i*25+","+j*25+",0.7)";
       ctx.fillRect(i * 40,  j * 40, 20, 20);    
     }//end j for loop
   }//end i for loop
