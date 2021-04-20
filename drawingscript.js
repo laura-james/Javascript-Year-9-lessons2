@@ -51,6 +51,12 @@ function draw() {
 
   ctx.stroke();
 }
+draw()
+
+
+
+
+
 
 function drawbasic() {
   i = i + 1;
