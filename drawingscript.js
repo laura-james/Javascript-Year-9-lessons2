@@ -11,7 +11,7 @@ function draw() {
   //a yellow circle with a green outline
   ctx.beginPath();
   ctx.fillStyle = "yellow";
-  ctx.arc(100, 100, 90, 0, 2 * Math.PI);
+  ctx.arc(100, 100, 90, 0.3,3.2);
   //ctx.closePath();
   ctx.fill();
   ctx.stroke();
