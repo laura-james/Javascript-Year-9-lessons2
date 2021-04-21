@@ -101,7 +101,7 @@ function randCircle() {
   ctx.fill();
   //ctx.stroke();
 }
-setInterval(draw, 50);
+//setInterval(draw, 50);
 
 function drawGrid(){
 
@@ -150,39 +150,15 @@ function drawLinesOLD() {
 
 function drawLines(){
   var ctx = document.getElementById("mycanvas2").getContext("2d");
-  ctx.strokeStyle = "#6CB8A0";
-  ctx.lineWidth = 2;
-  for(var i = 0; i < 40; i++){
+  ctx.strokeStyle = "green";
+  for(var i = 0; i < 4; i++){
     ctx.moveTo(i*10, 0);
-    ctx.lineTo(100, 100);
+    ctx.lineTo(200, 200);
     ctx.stroke();
   }
-   for(var i = 0; i < 40; i++){
-    ctx.moveTo(i*10, 400);
-    ctx.lineTo(100, 200);
-    ctx.stroke();
-  }
-  for(var i = 0; i < 40; i++){
-    ctx.moveTo(0, i*10);
-    ctx.lineTo(100, 200);
-    ctx.stroke();
-  }
-  for(var i = 0; i < 41; i++){
-    ctx.moveTo( 400,i*10);
-    ctx.lineTo(100, 200);
-    ctx.stroke();
-  }
-  for (var i = 0; i < 11; i++) {
-    for (var j = 0; j < 11; j++) {
-      ctx.beginPath();
-      ctx.fillStyle = "#EE1AAB";
-      //ctx.fillStyle = "rgba("+i*j*2+","+i*15+","+j*15+",0.8)";
-      ctx.arc(i * 40,  j * 40, 5+i, 0,2*Math.PI);    
-      ctx.fill()
-    }//end j for loop
-  }//end i for loop
 }
 drawLines()
+
 
 
 
