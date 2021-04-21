@@ -54,30 +54,15 @@ function draw() {
 draw();
 
 function drawbasic() {
-  i = i + 1;
-  if (i > 250) {
-    i = 0;
-  }
-  var ctx = document.getElementById("mycanvas").getContext("2d");
-  //a red rectangle
-  ctx.fillStyle = "red";
-  ctx.fillRect(10, 10, 150, 100);
-  ctx.lineWidth = 5;
-
-  //ctx.strokeStyle = "green";
-  ctx.moveTo(10, 10);
-  ctx.lineTo(160, 110);
-  ctx.moveTo(160, 10);
-  ctx.lineTo(10, 110);
-  ctx.stroke();
-  //ctx.closePath();
-  ctx.beginPath();
-  ctx.fillStyle = "yellow";
-  ctx.strokeStyle = "orange";
-  ctx.arc(i, 100, 50, 0, 2 * Math.PI);
-  ctx.fill();
-  ctx.stroke();
+  var ctx = document.getElementById("gridcanvas").getContext("2d");
+  for (var i = 0; i < 20; i++) {
+    for (var j = 0; j < 20; j++) {
+      ctx.fillStyle = "rgb(255,123,66)";
+      ctx.fillRect(i * 20, j * 20, 10, 10);
+    } //end j for loop
+  } //end i for loop
 }
+drawbasic() 
 var i = 0;
 function randCircle() {
   var ctx = document.getElementById("mycanvas").getContext("2d");
