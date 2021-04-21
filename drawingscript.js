@@ -151,7 +151,7 @@ function drawLinesOLD() {
 function drawLines(){
   var ctx = document.getElementById("mycanvas2").getContext("2d");
   ctx.strokeStyle = "green";
-  for(var i = 0; i < 4; i++){
+  for(var i = 0; i < 400; i++){
     ctx.moveTo(i*10, 0);
     ctx.lineTo(200, 200);
     ctx.stroke();
