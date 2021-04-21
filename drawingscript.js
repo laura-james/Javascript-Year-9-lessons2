@@ -55,10 +55,10 @@ draw();
 
 function drawbasic() {
   var ctx = document.getElementById("gridcanvas").getContext("2d");
-  for (var i = 0; i < 20; i++) {
-    for (var j = 0; j < 20; j++) {
+  for (var i = 0; i < 8; i++) {
+    for (var j = 0; j < 8; j++) {
       ctx.fillStyle = "rgb(255,123,66)";
-      ctx.fillRect(i * 20, j * 20, 10, 10);
+      ctx.fillRect(i * 50, j * 50, 30, 30);
     } //end j for loop
   } //end i for loop
 }
