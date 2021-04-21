@@ -11,7 +11,7 @@ function draw() {
   //a yellow circle with a green outline
   ctx.beginPath();
   ctx.fillStyle = "yellow";
-  ctx.arc(100, 100, 90, -0.2,2.7);
+  ctx.arc(100, 100, 90, -0.2, 2.7);
   //ctx.closePath();
   ctx.fill();
   ctx.stroke();
@@ -51,12 +51,7 @@ function draw() {
 
   ctx.stroke();
 }
-draw()
-
-
-
-
-
+draw();
 
 function drawbasic() {
   i = i + 1;
@@ -103,42 +98,39 @@ function randCircle() {
 }
 //setInterval(draw, 50);
 
-function drawGrid(){
-
+function drawGrid() {
   var ctx = document.getElementById("mycanvas2").getContext("2d");
 
   for (var i = 0; i < 11; i++) {
     for (var j = 0; j < 11; j++) {
       //ctx.fillStyle = "magenta";
-      ctx.fillStyle = "rgb(255,"+i*25+","+j*25+")";
+      ctx.fillStyle = "rgb(255," + i * 25 + "," + j * 25 + ")";
 
-      ctx.fillRect(i * 40,  j * 40, 20, 20);    
-    }//end j for loop
-  }//end i for loop
+      ctx.fillRect(i * 40, j * 40, 20, 20);
+    } //end j for loop
+  } //end i for loop
 }
 //drawGrid();
-var height=400;
+var height = 400;
 function drawLinesOLD() {
-  
-  height=height-2
-  if (height<-400){
-    height=400
+  height = height - 2;
+  if (height < -400) {
+    height = 400;
   }
   var ctx = document.getElementById("mycanvas2").getContext("2d");
   ctx.fillStyle = "yellow";
   ctx.fillRect(0, 0, 400, 400);
   // ctx.beginPath();
   for (var i = 0; i < 41; i++) {
-      ctx.beginPath();
-    ctx.moveTo(i * 10, 400-height);
+    ctx.beginPath();
+    ctx.moveTo(i * 10, 400 - height);
     ctx.lineTo(200, 200);
 
     ctx.stroke();
   }
-   
+
   for (var i = 0; i < 41; i++) {
-    
-   //   ctx.beginPath();
+    //   ctx.beginPath();
     ctx.moveTo(i * 10, height);
     ctx.lineTo(200, 200);
 
@@ -146,22 +138,20 @@ function drawLinesOLD() {
   }
 }
 
-
-
-function drawLines(){
+function drawLines() {
   var ctx = document.getElementById("mycanvas2").getContext("2d");
   ctx.strokeStyle = "green";
-  for(var i = 0; i < 400; i++){
-    ctx.moveTo(i*10, 0);
+  for (var i = 0; i < 400; i++) {
+    ctx.moveTo(i * 10, 0);
     ctx.lineTo(200, 200);
     ctx.stroke();
   }
+  for (var i = 0; i < 10; i++) {
+    for (var j = 0; j < 10; j++) {
+      ctx.fillStyle = "rgb(255,"+i*25+","+j*25+")";
+
+      ctx.fillRect(i * 40, j * 40, 20, 25);
+    } //end j for loop
+  } //end i for loop
 }
-drawLines()
-
-
-
-
-
-
-
+drawLines();
