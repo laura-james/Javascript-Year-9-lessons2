@@ -51,7 +51,7 @@ function draw() {
 
   ctx.stroke();
 }
-draw();
+
 
 function drawbasic() {
   var ctx = document.getElementById("gridcanvas").getContext("2d");
@@ -62,7 +62,7 @@ function drawbasic() {
     } //end j for loop
   } //end i for loop
 }
-drawbasic() 
+//drawbasic() 
 var i = 0;
 function randCircle() {
   var ctx = document.getElementById("mycanvas").getContext("2d");
@@ -139,4 +139,4 @@ function drawLines() {
     } //end j for loop
   } //end i for loop
 }
-drawLines();
+//drawLines();
