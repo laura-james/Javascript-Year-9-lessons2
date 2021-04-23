@@ -52,7 +52,6 @@ function draw() {
   ctx.stroke();
 }
 
-
 function drawbasic() {
   var ctx = document.getElementById("gridcanvas").getContext("2d");
   for (var i = 0; i < 8; i++) {
@@ -62,7 +61,7 @@ function drawbasic() {
     } //end j for loop
   } //end i for loop
 }
-//drawbasic() 
+//drawbasic()
 var i = 0;
 function randCircle() {
   var ctx = document.getElementById("mycanvas").getContext("2d");
@@ -123,20 +122,29 @@ function drawLinesOLD() {
   }
 }
 
-function drawLines(){
+function drawLines() {
   var ctx = document.getElementById("mycanvas2").getContext("2d");
-  ctx.strokeStyle = "green";
-   for(var i = 0; i < 41; i++){
-    ctx.moveTo(i*10, 0);
-    ctx.lineTo(200, 200);
-    ctx.stroke();
-  }
-  for(var i = 0; i < 41; i++){
-    ctx.moveTo(i*10, 0);
-    ctx.lineTo(200, 200);
-    ctx.stroke();
-  }
+  for (var i = 0; i < 10; i++) {
+    for (var j = 0; j < 10; j++) {
+      ctx.fillStyle = "rgb(255,"+i*25+","+j*25+")";
 
+      ctx.fillRect(i * 40,  j * 45, 15, 20);    
+    }//end j for loop
+  }//end i for loop
+  ctx.beginPath()
+  ctx.strokeStyle = "cyan";
+  for (var i = 0; i < 41; i++) {
+    ctx.moveTo(i * 10, 0);
+    ctx.lineTo(200, 200);
+    ctx.stroke();
+  }
+  for (var i = 0; i < 41; i++) {
+    ctx.moveTo(i * 10, 400);
+    ctx.lineTo(200, 200);
+    ctx.stroke();
+  }
+ 
+
+  
 }
-drawLines()
-
+drawLines();
