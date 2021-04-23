@@ -131,6 +131,11 @@ function drawLines(){
     ctx.lineTo(200, 200);
     ctx.stroke();
   }
+  for(var i = 0; i < 41; i++){
+    ctx.moveTo(i*10, 0);
+    ctx.lineTo(200, 200);
+    ctx.stroke();
+  }
 
 }
 drawLines()
