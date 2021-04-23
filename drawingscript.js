@@ -123,20 +123,15 @@ function drawLinesOLD() {
   }
 }
 
-function drawLines() {
+function drawLines(){
   var ctx = document.getElementById("mycanvas2").getContext("2d");
   ctx.strokeStyle = "green";
-  for (var i = 0; i < 400; i++) {
-    ctx.moveTo(i * 10, 0);
+   for(var i = 0; i < 41; i++){
+    ctx.moveTo(i*10, 0);
     ctx.lineTo(200, 200);
     ctx.stroke();
   }
-  for (var i = 0; i < 10; i++) {
-    for (var j = 0; j < 10; j++) {
-      ctx.fillStyle = "rgb(255,"+i*25+","+j*25+")";
 
-      ctx.fillRect(i * 40, j * 40, 20, 25);
-    } //end j for loop
-  } //end i for loop
 }
-//drawLines();
+drawLines()
+
