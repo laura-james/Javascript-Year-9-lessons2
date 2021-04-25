@@ -144,3 +144,13 @@ function drawLines() {
   }
 }
 drawLines();
+
+function drawRandom() {
+  var ctx = document.getElementById("mycanvas3").getContext("2d");
+  var red = Math.floor(Math.random() *255);
+  ctx.beginPath();
+  ctx.fillStyle("rgb("+red+",0,0)")
+  ctx.arc(200, 200, 100, 0, 2 * Math.PI);
+  ctx.fill();
+}
+drawRandom()
