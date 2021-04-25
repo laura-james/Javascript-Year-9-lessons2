@@ -151,13 +151,16 @@ drawLines();
 
 function drawRandom() {
   var ctx = document.getElementById("mycanvas3").getContext("2d");
-  var red = Math.floor(Math.random() *255);
+  var red = Math.floor(Math.random() *20);
   var blue = Math.floor(Math.random() *255);
   var green = Math.floor(Math.random() *255);
+  var radius = Math.floor(Math.random() *20);
+  var x = Math.floor(Math.random() *400);
+  var y = Math.floor(Math.random() *400);
   ctx.beginPath();
-  ctx.fillStyle="rgb("+red+","+blue+","+green+")";
-  ctx.arc(200, 200, 70, 0, 2 * Math.PI);
+  ctx.fillStyle="rgb("+red+","+blue+","+green+",0.6)";
+  ctx.arc(x, y, radius, 0, 2 * Math.PI);
   ctx.fill();
 }
 //drawRandom()
-setInterval(drawRandom,100)
+setInterval(drawRandom,10)
