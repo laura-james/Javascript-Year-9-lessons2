@@ -160,17 +160,6 @@ function drawRandom() {
 }
 //drawRandom()
 setInterval(drawRandom, 100);
-function getCursorPosition(canvas, event) {
-  var rect = canvas.getBoundingClientRect();
-  var x = event.clientX - rect.left;
-  var y = event.clientY - rect.top;
-  console.log("mouse at x: " + x + " y: " + y);
-  var ctx = canvas.getContext("2d");
-  ctx.beginPath();
-  ctx.fillStyle = "red";
-  ctx.arc(x, y, 10, 0, 2 * Math.PI);
-  ctx.fill();
-}
 
 function changeRadius(canvas, event){
   console.log(event.deltaY)
@@ -183,9 +172,23 @@ function changeRadius(canvas, event){
 }
 
 var canvas = document.getElementById("mycanvas3");
-canvas.addEventListener("mousedown", function(e) {
-  getCursorPosition(canvas, e);
-});
 canvas.addEventListener("wheel", function(e) {
   changeRadius(canvas, e);
+});
+
+
+
+function getCursorPosition(canvas, event) {
+  var rect = canvas.getBoundingClientRect();
+  var x = event.clientX - rect.left;
+  var y = event.clientY - rect.top;
+  console.log("mouse at x: " + x + " y: " + y);
+  var ctx = canvas.getContext("2d");
+  ctx.beginPath();
+  ctx.fillStyle = "red";
+  ctx.arc(x, y, 10, 0, 2 * Math.PI);
+  ctx.fill();
+}
+canvas.addEventListener("mousedown", function(e) {
+  getCursorPosition(canvas, e);
 });
