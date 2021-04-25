@@ -11,7 +11,7 @@ function draw() {
   //a yellow circle with a green outline
   ctx.beginPath();
   ctx.fillStyle = "yellow";
-  ctx.arc(100, 100, 90,0, 2 * Math.PI);
+  ctx.arc(100, 100, 90, 0, 2 * Math.PI);
   //ctx.closePath();
   ctx.fill();
   ctx.stroke();
@@ -126,11 +126,11 @@ function drawLines() {
   var ctx = document.getElementById("mycanvas2").getContext("2d");
   for (var i = 0; i < 10; i++) {
     for (var j = 0; j < 10; j++) {
-      ctx.fillStyle = "rgb(255,"+i*25+","+j*25+")";
-      ctx.fillRect(i * 40,  j * 45, 15, 20);    
-    }//end j for loop
-  }//end i for loop
-  ctx.beginPath()
+      ctx.fillStyle = "rgb(255," + i * 25 + "," + j * 25 + ")";
+      ctx.fillRect(i * 40, j * 45, 15, 20);
+    } //end j for loop
+  } //end i for loop
+  ctx.beginPath();
   ctx.strokeStyle = "cyan";
   for (var i = 0; i < 41; i++) {
     ctx.moveTo(i * 10, 0);
@@ -145,22 +145,34 @@ function drawLines() {
 }
 drawLines();
 
-
-
-
-
 function drawRandom() {
   var ctx = document.getElementById("mycanvas3").getContext("2d");
-  var red = Math.floor(Math.random() *20);
-  var blue = Math.floor(Math.random() *255);
-  var green = Math.floor(Math.random() *255);
-  var radius = Math.floor(Math.random() *20);
-  var x = Math.floor(Math.random() *400);
-  var y = Math.floor(Math.random() *400);
+  var red = Math.floor(Math.random() * 20);
+  var blue = Math.floor(Math.random() * 255);
+  var green = Math.floor(Math.random() * 255);
+  var radius = Math.floor(Math.random() * 20);
+  var x = Math.floor(Math.random() * 400);
+  var y = Math.floor(Math.random() * 400);
   ctx.beginPath();
-  ctx.fillStyle="rgb("+red+","+blue+","+green+",0.6)";
+  ctx.fillStyle = "rgb(" + red + "," + blue + "," + green + ",0.6)";
   ctx.arc(x, y, radius, 0, 2 * Math.PI);
   ctx.fill();
 }
 //drawRandom()
-setInterval(drawRandom,10)
+setInterval(drawRandom, 500);
+function getCursorPosition(canvas, event) {
+  var rect = canvas.getBoundingClientRect();
+  var x = event.clientX - rect.left;
+  var y = event.clientY - rect.top;
+  console.log("x: " + x + " y: " + y);
+  var ctx = canvas.getContext("2d");
+  ctx.beginPath();
+  ctx.fillStyle = "red";
+  ctx.arc(x, y, 10, 0, 2 * Math.PI);
+  ctx.fill();
+}
+
+const canvas = document.getElementById("mycanvas3");
+canvas.addEventListener("mousemove", function(e) {
+  getCursorPosition(canvas, e);
+});
