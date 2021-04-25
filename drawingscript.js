@@ -11,7 +11,7 @@ function draw() {
   //a yellow circle with a green outline
   ctx.beginPath();
   ctx.fillStyle = "yellow";
-  ctx.arc(100, 100, 90, -0.2, 2.7);
+  ctx.arc(100, 100, 90,0, 2 * Math.PI);
   //ctx.closePath();
   ctx.fill();
   ctx.stroke();
@@ -127,7 +127,6 @@ function drawLines() {
   for (var i = 0; i < 10; i++) {
     for (var j = 0; j < 10; j++) {
       ctx.fillStyle = "rgb(255,"+i*25+","+j*25+")";
-
       ctx.fillRect(i * 40,  j * 45, 15, 20);    
     }//end j for loop
   }//end i for loop
@@ -143,8 +142,5 @@ function drawLines() {
     ctx.lineTo(200, 200);
     ctx.stroke();
   }
- 
-
-  
 }
 drawLines();
