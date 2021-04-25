@@ -145,12 +145,19 @@ function drawLines() {
 }
 drawLines();
 
+
+
+
+
 function drawRandom() {
   var ctx = document.getElementById("mycanvas3").getContext("2d");
   var red = Math.floor(Math.random() *255);
+  var blue = Math.floor(Math.random() *255);
+  var green = Math.floor(Math.random() *255);
   ctx.beginPath();
-  ctx.fillStyle("rgb("+red+",0,0)")
-  ctx.arc(200, 200, 100, 0, 2 * Math.PI);
+  ctx.fillStyle="rgb("+red+","+blue+","+green+")";
+  ctx.arc(red, blue, 70, 0, 2 * Math.PI);
   ctx.fill();
 }
 drawRandom()
+setInterval(drawRandom,100)
