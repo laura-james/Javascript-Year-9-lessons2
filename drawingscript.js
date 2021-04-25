@@ -156,8 +156,8 @@ function drawRandom() {
   var green = Math.floor(Math.random() *255);
   ctx.beginPath();
   ctx.fillStyle="rgb("+red+","+blue+","+green+")";
-  ctx.arc(red, blue, 70, 0, 2 * Math.PI);
+  ctx.arc(200, 200, 70, 0, 2 * Math.PI);
   ctx.fill();
 }
-drawRandom()
+//drawRandom()
 setInterval(drawRandom,100)
