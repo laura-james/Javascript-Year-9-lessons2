@@ -160,7 +160,7 @@ function drawRandom() {
   ctx.beginPath();
   ctx.fillStyle = "rgb(" + red + "," + blue + "," + green + ",0.6)";
   ctx.strokeStyle = "rgb(" + red + "," + blue + "," + green + ",0.6)";
-  ctx.lineWidth=5;
+  ctx.lineWidth=1;
   ctx.arc(x, y, radius, 0, 2 * Math.PI);
   ctx.fill();
   ctx.beginPath();
@@ -170,10 +170,12 @@ ctx.moveTo(200, 200);
 ctx.bezierCurveTo(0, 100,100,0, 200,200);
 ctx.bezierCurveTo( 300,400,400,300, 200,200);
 ctx.stroke();
-  ctx.rotate(5 * Math.PI / 180);
+ ctx.translate(200, 200);
+ctx.rotate(Math.PI / 2/24);
+ctx.translate(-200, -200);
 }
 //drawRandom()
-setInterval(drawRandom, 500);
+setInterval(drawRandom, 50);
 
 function changeRadius(canvas, event){
   console.log(event.deltaY)
