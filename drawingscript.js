@@ -166,6 +166,8 @@ function drawRandom() {
   ctx.beginPath();
 ctx.moveTo(200, 200);
 ctx.bezierCurveTo(x,y, x2,y2, x3,y3);
+ctx.moveTo(200, 200);
+ctx.bezierCurveTo(100,400, 400,100, 0,0);
 ctx.stroke();
 }
 //drawRandom()
