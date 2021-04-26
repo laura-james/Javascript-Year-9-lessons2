@@ -192,3 +192,8 @@ function getCursorPosition(canvas, event) {
 canvas.addEventListener("mousedown", function(e) {
   getCursorPosition(canvas, e);
 });
+
+
+function drawRandom(){
+  
+}
