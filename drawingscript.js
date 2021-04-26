@@ -194,6 +194,7 @@ canvas.addEventListener("mousedown", function(e) {
 });
 
 
-function drawRandom(){
-  
+function drawRandom2(){
+  alert("hello")
 }
+setInterval(drawRandom2,1000)
