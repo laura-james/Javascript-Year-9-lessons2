@@ -153,10 +153,18 @@ function drawRandom() {
   //var radius = Math.floor(Math.random() * 20);
   var x = Math.floor(Math.random() * 400);
   var y = Math.floor(Math.random() * 400);
+  var x2 = Math.floor(Math.random() * 400);
+  var x3 = Math.floor(Math.random() * 400);
+  var y2 = Math.floor(Math.random() * 400);
+  var y3 = Math.floor(Math.random() * 400);
   ctx.beginPath();
   ctx.fillStyle = "rgb(" + red + "," + blue + "," + green + ",0.6)";
   ctx.arc(x, y, radius, 0, 2 * Math.PI);
   ctx.fill();
+  ctx.beginPath();
+ctx.moveTo(200, 200);
+ctx.quadraticCurveTo(x,y, x2,y2);
+ctx.stroke();
 }
 //drawRandom()
 setInterval(drawRandom, 100);
@@ -194,7 +202,3 @@ canvas.addEventListener("mousedown", function(e) {
 });
 
 
-function drawRandom2(){
-  alert("hello")
-}
-setInterval(drawRandom2,1000)
