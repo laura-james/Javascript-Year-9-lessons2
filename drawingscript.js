@@ -165,10 +165,12 @@ function drawRandom() {
   ctx.fill();
   ctx.beginPath();
 ctx.moveTo(200, 200);
-ctx.bezierCurveTo(x,y, x2,y2, x3,y3);
+//ctx.bezierCurveTo(x,y, x2,y2, x3,y3);
 ctx.moveTo(200, 200);
-ctx.bezierCurveTo(100,400, 400,100, 0,0);
+ctx.bezierCurveTo(0, 100,100,0, 200,200);
+ctx.bezierCurveTo( 300,400,400,300, 200,200);
 ctx.stroke();
+  ctx.rotate(5 * Math.PI / 180);
 }
 //drawRandom()
 setInterval(drawRandom, 500);
