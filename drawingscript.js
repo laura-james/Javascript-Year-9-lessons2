@@ -159,15 +159,17 @@ function drawRandom() {
   var y3 = Math.floor(Math.random() * 400);
   ctx.beginPath();
   ctx.fillStyle = "rgb(" + red + "," + blue + "," + green + ",0.6)";
+  ctx.strokeStyle = "rgb(" + red + "," + blue + "," + green + ",0.6)";
+  ctx.lineWidth=5;
   ctx.arc(x, y, radius, 0, 2 * Math.PI);
   ctx.fill();
   ctx.beginPath();
 ctx.moveTo(200, 200);
-ctx.quadraticCurveTo(x,y, x2,y2);
+ctx.bezierCurveTo(x,y, x2,y2, x3,y3);
 ctx.stroke();
 }
 //drawRandom()
-setInterval(drawRandom, 100);
+setInterval(drawRandom, 500);
 
 function changeRadius(canvas, event){
   console.log(event.deltaY)
