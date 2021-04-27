@@ -34,21 +34,21 @@ function keyPress(code) {
     //console.log("LEFT")
     playerX = playerX - 50;
     if (playerX<0){
-      playerX = 500
+      playerX = 450
     }
   }
   if (code == 39) {
     //console.log("RIGHT")
     playerX = playerX + 50;
-    if (playerX>500){
+    if (playerX>450){
       playerX = 0
     }
   }
   if (code == 38) {
     //console.log("UP");
     playerY = playerY - 50;
-    if (playerY<=0){
-      playerY = 500
+    if (playerY<0){
+      playerY = 450
     }
   }
   if (code == 40) {
