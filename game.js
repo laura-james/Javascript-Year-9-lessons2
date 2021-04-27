@@ -33,18 +33,30 @@ function keyPress(code) {
   if (code == 37) {
     //console.log("LEFT")
     playerX = playerX - 50;
+    if (playerX<0){
+      playerX = 500
+    }
   }
   if (code == 39) {
     //console.log("RIGHT")
     playerX = playerX + 50;
+    if (playerX>500){
+      playerX = 0
+    }
   }
   if (code == 38) {
     //console.log("UP");
     playerY = playerY - 50;
+    if (playerY<=0){
+      playerY = 500
+    }
   }
   if (code == 40) {
     //console.log("DOWN");
     playerY = playerY + 50;
+    if (playerY>450){
+      playerY = 0
+    }
   }
 }
 addEventListener("keydown", e => keyPress(e.keyCode));
