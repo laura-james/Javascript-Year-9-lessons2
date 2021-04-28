@@ -71,6 +71,7 @@ function drawGrid() {
     ctx.lineTo(i * 50, 500);
     ctx.stroke();
   }
+  randomFruit();
 }
 function drawPlayer() {
   drawGrid();
@@ -85,4 +86,5 @@ function randomFruit(){
   ctx.fillStyle = "blue";
   ctx.fillRect(x*50, y*50, 50, 50);
 }
-setInterval(drawPlayer, 1);
+
+setInterval(drawPlayer, 1000);
