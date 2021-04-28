@@ -79,5 +79,10 @@ function drawPlayer() {
 }
 var playerX = 0;
 var playerY = 0;
-
+function randomFruit(){
+  var x = Math.floor(Math.random() * 10);
+  var y = Math.floor(Math.random() * 10);
+  ctx.fillStyle = "blue";
+  ctx.fillRect(x*50, y*50, 50, 50);
+}
 setInterval(drawPlayer, 1);
