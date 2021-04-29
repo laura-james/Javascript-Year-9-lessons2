@@ -214,7 +214,12 @@ addEventListener("keydown", e => keyPress(e.keyCode));
 
 function keyPress(code){
   console.log("key pressed = " + code)
- 
+  if(code==65){
+    console.log("You pressed A")
+  }
+  if(code==68){
+    console.log("You pressed D")
+  }
 }
 
  //https://keycode.info/
