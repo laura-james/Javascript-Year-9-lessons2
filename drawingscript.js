@@ -164,15 +164,15 @@ function drawRandom() {
   ctx.arc(x, y, radius, 0, 2 * Math.PI);
   ctx.fill();
   ctx.beginPath();
-ctx.moveTo(200, 200);
+//ctx.moveTo(200, 200);
 //ctx.bezierCurveTo(x,y, x2,y2, x3,y3);
-ctx.moveTo(200, 200);
-ctx.bezierCurveTo(0, 100,100,0, 200,200);
-ctx.bezierCurveTo( 300,400,400,300, 200,200);
-ctx.stroke();
- ctx.translate(200, 200);
-ctx.rotate(Math.PI / 2/24);
-ctx.translate(-200, -200);
+//ctx.moveTo(200, 200);
+//ctx.bezierCurveTo(0, 100,100,0, 200,200);
+//ctx.bezierCurveTo( 300,400,400,300, 200,200);
+//ctx.stroke();
+ //ctx.translate(200, 200);
+//ctx.rotate(Math.PI / 2/24);
+//ctx.translate(-200, -200);
 }
 //drawRandom()
 setInterval(drawRandom, 50);
@@ -210,7 +210,12 @@ canvas.addEventListener("mousedown", function(e) {
 });
 
 
+addEventListener("keydown", e => keyPress(e.keyCode));
 
+function keyPress(code){
+  console.log("key pressed = " + code)
+  //https://keycode.info/
+}
 
 
 
