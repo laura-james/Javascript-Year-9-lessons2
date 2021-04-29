@@ -29,40 +29,48 @@ canvas.addEventListener("mousedown", function(e) {
 var canvas = document.getElementById("mycanvas");
 var ctx = canvas.getContext("2d");
 function keyPress(code) {
-  //console.log(code);
+  console.log(code);
   if (code == 37) {
-    //console.log("LEFT")
+    console.log("LEFT")
     playerX = playerX - 50;
-    if (playerX<0){
-      playerX = 450
+    if (playerX < 0) {
+      playerX = 450;
     }
   }
   if (code == 39) {
     //console.log("RIGHT")
     playerX = playerX + 50;
-    if (playerX>450){
-      playerX = 0
+    if (playerX > 450) {
+      playerX = 0;
     }
   }
   if (code == 38) {
     //console.log("UP");
     playerY = playerY - 50;
-    if (playerY<0){
-      playerY = 450
+    if (playerY < 0) {
+      playerY = 450;
     }
   }
   if (code == 40) {
     //console.log("DOWN");
     playerY = playerY + 50;
-    if (playerY>450){
-      playerY = 0
+    if (playerY > 450) {
+      playerY = 0;
     }
   }
-}
-//addEventListener("keydown", e => keyPress(e.keyCode));
-function drawGrid() {
+  if (code == 32) {
+    //console.log("SPACE");
+    playerX = 0;
+    playerY = 0;
+  }
+ }
+addEventListener("keydown", e => keyPress(e.keyCode));
+function blankScreen() {
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, 500, 500);
+}
+function drawGrid() {
+  blankScreen();
   for (var i = 0; i < 10; i++) {
     ctx.moveTo(0, i * 50);
     ctx.lineTo(500, i * 50);
@@ -80,29 +88,28 @@ function drawPlayer() {
 }
 var playerX = 0;
 var playerY = 0;
-function randomFruit(){
+function randomFruit() {
   var x = Math.floor(Math.random() * 10);
   var y = Math.floor(Math.random() * 10);
   ctx.fillStyle = "blue";
-  ctx.fillRect(x*50, y*50, 50, 50);
+  ctx.fillRect(x * 50, y * 50, 50, 50);
 }
 
 //setInterval(drawPlayer, 1000);
-var start
+var start;
 function step(timestamp) {
   //if (start === undefined)
   //  start = timestamp;
   //const elapsed = timestamp - start;
- ctx.fillStyle = "white";
-  ctx.fillRect(0, 0, 500, 500);
+  blankScreen();
   // `Math.min()` is used here to make sure that the element stops at exactly 200px.
   //element.style.transform = 'translateX(' + Math.min(0.1 * elapsed, 200) + 'px)';
-ctx.fillStyle = "red";
-  playerX=playerX+1
-  playerY=playerY+1
+  ctx.fillStyle = "red";
+  playerX = playerX + 1;
+  playerY = playerY + 1;
   ctx.fillRect(playerX, playerY, 50, 50);
   //if (elapsed < 3000) { // Stop the animation after 2 seconds
-    window.requestAnimationFrame(step);
+  window.requestAnimationFrame(step);
   //}
 }
 
