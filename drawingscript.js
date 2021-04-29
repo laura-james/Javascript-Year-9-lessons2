@@ -209,7 +209,11 @@ canvas.addEventListener("mousedown", function(e) {
   getCursorPosition(canvas, e);
 });
 
+///LESSON 4
 
+var circleX = 200;
+var circleY = 200;
+fu
 addEventListener("keydown", e => keyPress(e.keyCode));
 
 function keyPress(code){
