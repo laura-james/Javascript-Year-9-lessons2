@@ -211,21 +211,41 @@ canvas.addEventListener("mousedown", function(e) {
 
 ///LESSON 4
 
-var circleX = 200;
-var circleY = 200;
-fu
 addEventListener("keydown", e => keyPress(e.keyCode));
 
 function keyPress(code){
   console.log("key pressed = " + code)
   if(code==65){
     console.log("You pressed A")
+    circleX=circleX-10
   }
   if(code==68){
     console.log("You pressed D")
+    circleX=circleX+10
+  }
+  if(code==32){
+    console.log("You pressed space")
+    circleX=circleX+10
   }
 }
 
+var circleX = 200;
+var circleY = 200;
+
+function gameLoop(){
+  var ctx=document.getElementById("mycanvas4").getContext("2d");
+  //clear backgroun
+  ctx.fillStyle="white"
+  ctx.beginPath()
+  ctx.fillRect(0,0,400,400)
+  //draw red circle
+  ctx.fillStyle="red"
+  ctx.beginPath()
+  ctx.arc(circleX,circleY,20,0,2*Math.PI)
+  ctx.fill()
+  requestAnimationFrame(gameLoop)
+}
+requestAnimationFrame(gameLoop)
  //https://keycode.info/
 
 
