@@ -232,6 +232,9 @@ var radius = 20;
 //the main game loop
 function gameLoop(){
   var ctx = document.getElementById("mycanvas4").getContext("2d");
+  circleY=circleY+1
+  ctx.fillStyle = "white"
+  ctx.fillRect(0,0,400,400)
   //draw orange circle
   ctx.fillStyle = "orange"
   ctx.beginPath()
