@@ -209,7 +209,7 @@ canvas.addEventListener("mousedown", function(e) {
   getCursorPosition(canvas, e);
 });
 
-//LESSON 4
+//LESSON 4 - responding to keyboard events
 
 //listen out for key press and run keyPress function
 addEventListener("keydown", e => keyPress(e.keyCode));
@@ -236,8 +236,7 @@ function gameLoop(){
   ctx.fillStyle = "orange"
   ctx.beginPath()
   ctx.arc(circleX,circleY,radius,0,2*Math.PI)
-  ctx.fill()
-  
+  ctx.fill()  
   requestAnimationFrame(gameLoop)
 }
 requestAnimationFrame(gameLoop)
