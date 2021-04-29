@@ -59,7 +59,7 @@ function keyPress(code) {
     }
   }
 }
-addEventListener("keydown", e => keyPress(e.keyCode));
+//addEventListener("keydown", e => keyPress(e.keyCode));
 function drawGrid() {
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, 500, 500);
@@ -87,4 +87,23 @@ function randomFruit(){
   ctx.fillRect(x*50, y*50, 50, 50);
 }
 
-setInterval(drawPlayer, 1000);
+//setInterval(drawPlayer, 1000);
+var start
+function step(timestamp) {
+  //if (start === undefined)
+  //  start = timestamp;
+  //const elapsed = timestamp - start;
+ ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, 500, 500);
+  // `Math.min()` is used here to make sure that the element stops at exactly 200px.
+  //element.style.transform = 'translateX(' + Math.min(0.1 * elapsed, 200) + 'px)';
+ctx.fillStyle = "red";
+  playerX=playerX+1
+  playerY=playerY+1
+  ctx.fillRect(playerX, playerY, 50, 50);
+  //if (elapsed < 3000) { // Stop the animation after 2 seconds
+    window.requestAnimationFrame(step);
+  //}
+}
+
+window.requestAnimationFrame(step);
