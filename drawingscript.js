@@ -150,32 +150,19 @@ function drawRandom() {
   var red = Math.floor(Math.random() * 20);
   var blue = Math.floor(Math.random() * 255);
   var green = Math.floor(Math.random() * 255);
-  //var radius = Math.floor(Math.random() * 20);
-  var x = Math.floor(Math.random() * 400);
-  var y = Math.floor(Math.random() * 400);
-  var x2 = Math.floor(Math.random() * 400);
-  var x3 = Math.floor(Math.random() * 400);
-  var y2 = Math.floor(Math.random() * 400);
-  var y3 = Math.floor(Math.random() * 400);
+
   ctx.beginPath();
-  ctx.fillStyle = "rgb(" + red + "," + blue + "," + green + ",0.6)";
-  ctx.strokeStyle = "rgb(" + red + "," + blue + "," + green + ",0.6)";
+  ctx.fillStyle = "rgb(" + red + "," + blue + "," + green + ")";
+
   ctx.lineWidth=1;
-  ctx.arc(x, y, radius, 0, 2 * Math.PI);
+  ctx.arc(200,200, 70,0, 2 * Math.PI);
   ctx.fill();
   ctx.beginPath();
-//ctx.moveTo(200, 200);
-//ctx.bezierCurveTo(x,y, x2,y2, x3,y3);
-//ctx.moveTo(200, 200);
-//ctx.bezierCurveTo(0, 100,100,0, 200,200);
-//ctx.bezierCurveTo( 300,400,400,300, 200,200);
-//ctx.stroke();
- //ctx.translate(200, 200);
-//ctx.rotate(Math.PI / 2/24);
-//ctx.translate(-200, -200);
+
 }
 //drawRandom()
-setInterval(drawRandom, 50);
+//
+setInterval(drawRandom,1000);
 
 function changeRadius(canvas, event){
   console.log(event.deltaY)
