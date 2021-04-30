@@ -115,6 +115,7 @@ addEventListener("keydown", e => keyPress(e.keyCode));
 //start of keyPress function
 function keyPress(code) {
   console.log("key pressed = " + code);
+  console.log(circleX+" "+circleY)
   if (code == 65) {
     console.log("You pressed A");
     circleX = circleX - 10;
@@ -132,13 +133,30 @@ function keyPress(code) {
     circleY = circleY + 10;
   }
 }
+function drawRandomFruit(){
+  randomFruitX = Math.floor(Math.random()*400)
+  randomFruitY = Math.floor(Math.random()*400)
+  var ctx = document.getElementById("mycanvas4").getContext("2d");
+  ctx.fillStyle = "green";
+  ctx.beginPath();
+  ctx.arc(randomFruitX, randomFruitY, 10, 0, 2 * Math.PI);
+  ctx.fill();
+}
+drawRandomFruit()
 //set up variables to control the circle
 var circleX = 200;
 var circleY = 200;
 var radius = 20;
+var randomFruitX = 0
+var randomFruitY = 0
 //the main game loop
 function gameLoop() {
   var ctx = document.getElementById("mycanvas4").getContext("2d");
+  //check if x y is at a position
+  
+  if(circleX >= 50 && circleX <= 60 && circleY >= 20 && circleY <= 30){
+    console.log("You found secret spot")
+  }
   //fill in background
   ctx.fillStyle = "rgba(255,255,255,0.01)";
   ctx.fillRect(0, 0, 400, 400);
