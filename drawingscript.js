@@ -144,42 +144,41 @@ function drawLines() {
   }
 }
 drawLines();
-var radius = 10
+var radius = 10;
 function drawRandom() {
   var ctx = document.getElementById("mycanvas3").getContext("2d");
-  var red = Math.floor(Math.random() * 20);
-  var blue = Math.floor(Math.random() * 255);
+  var red = Math.floor(Math.random() * 155);
+  var blue = Math.floor(Math.random() * 50);
   var green = Math.floor(Math.random() * 255);
-
+  var radius = Math.floor(Math.random() * 50);
+  var x = Math.floor(Math.random() * 400);
+  var y = Math.floor(Math.random() * 400);
   ctx.beginPath();
-  ctx.fillStyle = "rgb(" + red + "," + blue + "," + green + ")";
+  ctx.fillStyle = "rgba(" + red + "," + blue + "," + green + ",0.3)";
 
-  ctx.lineWidth=1;
-  ctx.arc(200,200, 70,0, 2 * Math.PI);
+  ctx.lineWidth = 1;
+  ctx.arc(x, y, radius, 0, 2 * Math.PI);
   ctx.fill();
   ctx.beginPath();
-
 }
 //drawRandom()
 //
-setInterval(drawRandom,1000);
+setInterval(drawRandom, 100);
 
-function changeRadius(canvas, event){
-  console.log(event.deltaY)
-  if (event.deltaY>0){
-    radius= radius+1
-  }else{
-    radius= radius-1
+function changeRadius(canvas, event) {
+  console.log(event.deltaY);
+  if (event.deltaY > 0) {
+    radius = radius + 1;
+  } else {
+    radius = radius - 1;
   }
-  console.log(radius)
+  console.log(radius);
 }
 
 var canvas = document.getElementById("mycanvas3");
 canvas.addEventListener("wheel", function(e) {
   changeRadius(canvas, e);
 });
-
-
 
 function getCursorPosition(canvas, event) {
   var rect = canvas.getBoundingClientRect();
@@ -201,15 +200,15 @@ canvas.addEventListener("mousedown", function(e) {
 //listen out for key press and run keyPress function
 addEventListener("keydown", e => keyPress(e.keyCode));
 //start of keyPress function
-function keyPress(code){
-  console.log("key pressed = " + code)
-  if(code == 65){
-    console.log("You pressed A")
-    circleX = circleX - 10
+function keyPress(code) {
+  console.log("key pressed = " + code);
+  if (code == 65) {
+    console.log("You pressed A");
+    circleX = circleX - 10;
   }
-  if(code==68){
-    console.log("You pressed D")
-    circleX = circleX + 10
+  if (code == 68) {
+    console.log("You pressed D");
+    circleX = circleX + 10;
   }
 }
 //set up variables to control the circle
@@ -217,45 +216,16 @@ var circleX = 200;
 var circleY = 200;
 var radius = 20;
 //the main game loop
-function gameLoop(){
+function gameLoop() {
   var ctx = document.getElementById("mycanvas4").getContext("2d");
-  circleY=circleY+1
-  ctx.fillStyle = "white"
-  ctx.fillRect(0,0,400,400)
+  circleY = circleY + 1;
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, 400, 400);
   //draw orange circle
-  ctx.fillStyle = "orange"
-  ctx.beginPath()
-  ctx.arc(circleX,circleY,radius,0,2*Math.PI)
-  ctx.fill()  
-  requestAnimationFrame(gameLoop)
+  ctx.fillStyle = "orange";
+  ctx.beginPath();
+  ctx.arc(circleX, circleY, radius, 0, 2 * Math.PI);
+  ctx.fill();
+  requestAnimationFrame(gameLoop);
 }
-requestAnimationFrame(gameLoop)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+requestAnimationFrame(gameLoop);
