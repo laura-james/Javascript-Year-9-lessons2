@@ -123,6 +123,14 @@ function keyPress(code) {
     console.log("You pressed D");
     circleX = circleX + 10;
   }
+  if (code == 87) {
+    console.log("You pressed W");
+    circleY = circleY - 10;
+  }
+  if (code == 83) {
+    console.log("You pressed S");
+    circleY = circleY + 10;
+  }
 }
 //set up variables to control the circle
 var circleX = 200;
@@ -132,10 +140,10 @@ var radius = 20;
 function gameLoop() {
   var ctx = document.getElementById("mycanvas4").getContext("2d");
   //fill in background
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "rgba(255,255,255,0.01)";
   ctx.fillRect(0, 0, 400, 400);
   //draw orange circle
-  ctx.fillStyle = "orange";
+  ctx.fillStyle = "magenta";
   ctx.beginPath();
   ctx.arc(circleX, circleY, radius, 0, 2 * Math.PI);
   ctx.fill();
