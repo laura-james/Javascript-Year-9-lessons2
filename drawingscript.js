@@ -133,37 +133,42 @@ function keyPress(code) {
     circleY = circleY + 10;
   }
 }
-function drawRandomFruit(){
+function generateFruitCoords(){
   randomFruitX = Math.floor(Math.random()*400)
-  randomFruitY = Math.floor(Math.random()*400)
-  var ctx = document.getElementById("mycanvas4").getContext("2d");
-  ctx.fillStyle = "green";
-  ctx.beginPath();
-  ctx.arc(randomFruitX, randomFruitY, 10, 0, 2 * Math.PI);
-  ctx.fill();
+  randomFruitY = Math.floor(Math.random()*400)  
+  console.log(randomFruitX);
+  console.log(randomFruitY);
 }
-drawRandomFruit()
+
 //set up variables to control the circle
 var circleX = 200;
 var circleY = 200;
-var radius = 20;
+var radius = 10;
 var randomFruitX = 0
 var randomFruitY = 0
+generateFruitCoords()
 //the main game loop
 function gameLoop() {
   var ctx = document.getElementById("mycanvas4").getContext("2d");
   //check if x y is at a position
   
-  if(circleX >= 50 && circleX <= 60 && circleY >= 20 && circleY <= 30){
+  if(circleX >= randomFruitX-10 && circleX <= randomFruitX+10 && circleY >= randomFruitY-10 && circleY <= randomFruitY){
     console.log("You found secret spot")
+    generateFruitCoords()
   }
   //fill in background
-  ctx.fillStyle = "rgba(255,255,255,0.01)";
+  ctx.fillStyle = "rgba(255,255,255,0.1)";
   ctx.fillRect(0, 0, 400, 400);
   //draw orange circle
   ctx.fillStyle = "magenta";
   ctx.beginPath();
   ctx.arc(circleX, circleY, radius, 0, 2 * Math.PI);
+  ctx.fill();
+ // generateFruitCoords()
+  //drawFruit
+  ctx.fillStyle = "green";
+  ctx.beginPath();
+  ctx.arc(randomFruitX, randomFruitY, 10, 0, 2 * Math.PI);
   ctx.fill();
   requestAnimationFrame(gameLoop);
 }
