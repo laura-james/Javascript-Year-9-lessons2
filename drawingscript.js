@@ -62,65 +62,6 @@ function drawbasic() {
   } //end i for loop
 }
 //drawbasic()
-var i = 0;
-function randCircle() {
-  var ctx = document.getElementById("mycanvas").getContext("2d");
-  var red = Math.floor(Math.random() * 255);
-  var green = Math.floor(Math.random() * 50);
-  var blue = Math.floor(Math.random() * 100);
-  ctx.fillStyle = "rgba(" + red + "," + green + "," + blue + ",0.4)";
-  ctx.strokeStyle = "orange";
-  ctx.beginPath();
-  var r1 = Math.floor(Math.random() * 200);
-  var r2 = Math.floor(Math.random() * 200);
-  var radius = Math.floor(Math.random() * 20);
-  var radius2 = Math.floor(Math.random() * 20);
-  //ctx.arc(r1, r2, radius, 0, 2 * Math.PI);
-  ctx.ellipse(r1, r2, radius, radius2, 1.2, 0, 2 * Math.PI);
-  ctx.fill();
-  //ctx.stroke();
-}
-//setInterval(draw, 50);
-
-function drawGrid() {
-  var ctx = document.getElementById("mycanvas2").getContext("2d");
-
-  for (var i = 0; i < 11; i++) {
-    for (var j = 0; j < 11; j++) {
-      //ctx.fillStyle = "magenta";
-      ctx.fillStyle = "rgb(255," + i * 25 + "," + j * 25 + ")";
-
-      ctx.fillRect(i * 40, j * 40, 20, 20);
-    } //end j for loop
-  } //end i for loop
-}
-//drawGrid();
-var height = 400;
-function drawLinesOLD() {
-  height = height - 2;
-  if (height < -400) {
-    height = 400;
-  }
-  var ctx = document.getElementById("mycanvas2").getContext("2d");
-  ctx.fillStyle = "yellow";
-  ctx.fillRect(0, 0, 400, 400);
-  // ctx.beginPath();
-  for (var i = 0; i < 41; i++) {
-    ctx.beginPath();
-    ctx.moveTo(i * 10, 400 - height);
-    ctx.lineTo(200, 200);
-
-    ctx.stroke();
-  }
-
-  for (var i = 0; i < 41; i++) {
-    //   ctx.beginPath();
-    ctx.moveTo(i * 10, height);
-    ctx.lineTo(200, 200);
-
-    ctx.stroke();
-  }
-}
 
 function drawLines() {
   var ctx = document.getElementById("mycanvas2").getContext("2d");
@@ -165,35 +106,7 @@ function drawRandom() {
 //
 setInterval(drawRandom, 100);
 
-function changeRadius(canvas, event) {
-  console.log(event.deltaY);
-  if (event.deltaY > 0) {
-    radius = radius + 1;
-  } else {
-    radius = radius - 1;
-  }
-  console.log(radius);
-}
 
-var canvas = document.getElementById("mycanvas3");
-canvas.addEventListener("wheel", function(e) {
-  changeRadius(canvas, e);
-});
-
-function getCursorPosition(canvas, event) {
-  var rect = canvas.getBoundingClientRect();
-  var x = event.clientX - rect.left;
-  var y = event.clientY - rect.top;
-  console.log("mouse at x: " + x + " y: " + y);
-  var ctx = canvas.getContext("2d");
-  ctx.beginPath();
-  ctx.fillStyle = "red";
-  ctx.arc(x, y, 10, 0, 2 * Math.PI);
-  ctx.fill();
-}
-canvas.addEventListener("mousedown", function(e) {
-  getCursorPosition(canvas, e);
-});
 
 //LESSON 4 - responding to keyboard events
 
@@ -218,7 +131,7 @@ var radius = 20;
 //the main game loop
 function gameLoop() {
   var ctx = document.getElementById("mycanvas4").getContext("2d");
-  circleY = circleY + 1;
+  //fill in background
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, 400, 400);
   //draw orange circle
