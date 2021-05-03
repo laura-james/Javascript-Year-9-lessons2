@@ -1,14 +1,10 @@
-Welcome to Glitch
+Year 9 Javascript Lessons
 =================
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
-
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
-
-Find out more [about Glitch](https://glitch.com/about).
+A series of lessons showing Year 9 students how to code in Javascript
 
 
-Your Project
+Details
 ------------
 
 ### ← README.md
@@ -17,21 +13,23 @@ That's this file, where you can tell people what your cool website does and how 
 
 ### ← index.html
 
-Where you'll write the content of your website. 
-
-### ← style.css
-
-CSS files add styling rules to your content.
+This is the home page of the site which should have links to alll the sub pages they have created. 
 
 ### ← script.js
 
-If you're feeling fancy you can add interactivity to your site with JavaScript.
+Most of the functions for the start of the course are contained here
+
+
+### ← style.css
+
+CSS was covered earlier in eth year so there is not as much styling as could be done here
+## Term 2
+We concencentrated on the <canvas> element andJavascript drawing during this term
+Most of the lessons add canvasses to teh *drawing.html* page and the scripts go in the *script.js* page
+
 
 ### ← assets
 
-Drag in `assets`, like images or music, to add them to your project
+This seems to be where the text the students have copied and pasted from my lesson powerpoints seem to end up!
 
-Made by [Glitch](https://glitch.com/)
--------------------
 
-\ ゜o゜)ノ
