@@ -88,14 +88,14 @@ drawLines();
 var radius = 10;
 function drawRandom() {
   var ctx = document.getElementById("mycanvas3").getContext("2d");
-  var red = Math.floor(Math.random() * 155);
-  var blue = Math.floor(Math.random() * 50);
+  var red = Math.floor(Math.random() * 255);
+  var blue = Math.floor(Math.random() * 255);
   var green = Math.floor(Math.random() * 255);
   var radius = Math.floor(Math.random() * 50);
   var x = Math.floor(Math.random() * 400);
   var y = Math.floor(Math.random() * 400);
   ctx.beginPath();
-  ctx.fillStyle = "rgba(" + red + "," + blue + "," + green + ",0.3)";
+  ctx.fillStyle = "rgba(" + red + "," + blue + "," + green + ",0.6)";
 
   ctx.lineWidth = 1;
   ctx.arc(x, y, radius, 0, 2 * Math.PI);
